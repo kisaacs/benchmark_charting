@@ -1,9 +1,15 @@
 import re
+import sys
 from subprocess import Popen, PIPE
 import diskcache
 
 diskCacheFile = "test"
+dataPointsKey = "data_points"
 
+noOfThreads = 8
+matrixSize = 200
+blockSize = 4
+chunkSize = 50
 
 def run_and_parse_blazemark():
     stepsLineParser = re.compile(r'\s+N=(\d+),\s+steps=\d+')
@@ -26,30 +32,56 @@ def run_and_parse_blazemark():
             print('{:5d}'.format(steps), ' ', tmf)
 
 
-def load_dataset():
+def load_database():
     return diskcache.Index(diskCacheFile + ".diskCacheIndex")
 
 
+def create_dictionary_of_data_points():
+    return {
+        'threads': noOfThreads,
+        'matrix': matrixSize,
+        'block': blockSize,
+        'chunk': chunkSize
+    }
+
+
 def prepare_the_db():
-    cc = load_dataset()
-    cc.cache['harami'] = 'nai'
-    cc.cache['vaivai'] = 10
-    cc.cache['nd'] = dict()
-    cd = dict()
-    cd['timesec'] = 100
-    cd['speed'] = 23423
-    cc.cache['nd'] = cd
+    db = load_database()
+    if dataPointsKey not in db.cache:
+        db.cache[dataPointsKey] = []
+    temp_list = [create_dictionary_of_data_points()]
+    db.cache[dataPointsKey] = temp_list
     print('cache created')
-    cc.cache.close()
+    db.cache.close()
 
 
 def read_from_db():
-    cd = load_dataset()
-    print(cd.cache['nd'])
+    cd = load_database()
+    print(cd.cache[dataPointsKey])
+
+
+def print_parameters():
+    print("=================================")
+    print("No of threads: " + str(noOfThreads))
+    print("Matrix size: " + str(matrixSize))
+    print("block size: " + str(blockSize))
+    print("Chunk size or num of blocks: " + str(chunkSize))
+    print("=================================")
 
 
 if __name__ == '__main__':
     # run_and_parse_blazemark()
+    print("Usage: %s no_of_threads matrix_size block_size chunk_size" % sys.argv[0])
+    if len(sys.argv) > 1:
+        noOfThreads = int(sys.argv[1])
+    if len(sys.argv) > 2:
+        matrixSize = int(sys.argv[2])
+    if len(sys.argv) > 3:
+        blockSize = int(sys.argv[3])
+    if len(sys.argv) > 4:
+        chunkSize = int(sys.argv[4])
+
+    print_parameters()
 
     prepare_the_db()
     read_from_db()
