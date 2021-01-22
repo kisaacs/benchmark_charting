@@ -2,6 +2,8 @@ import re
 from subprocess import Popen, PIPE
 import diskcache
 
+diskCacheFile = "test"
+
 
 def run_and_parse_blazemark():
     stepsLineParser = re.compile(r'\s+N=(\d+),\s+steps=\d+')
@@ -24,8 +26,12 @@ def run_and_parse_blazemark():
             print('{:5d}'.format(steps), ' ', tmf)
 
 
+def load_dataset():
+    return diskcache.Index(diskCacheFile + ".diskCacheIndex")
+
+
 def prepare_the_db():
-    cc = diskcache.Index("test.diskCacheIndex")
+    cc = load_dataset()
     cc.cache['harami'] = 'nai'
     cc.cache['vaivai'] = 10
     cc.cache['nd'] = dict()
@@ -38,7 +44,7 @@ def prepare_the_db():
 
 
 def read_from_db():
-    cd = diskcache.Index("test.diskCacheIndex")
+    cd = load_dataset()
     print(cd.cache['nd'])
 
 
