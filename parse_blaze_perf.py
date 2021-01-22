@@ -6,6 +6,7 @@ import diskcache
 diskCacheFile = "test"
 dataPointsKey = "data_points"
 
+params = dict()
 noOfThreads = 8
 matrixSize = 200
 blockSize = 4
@@ -49,7 +50,7 @@ def prepare_the_db():
     db = load_database()
     if dataPointsKey not in db.cache:
         db.cache[dataPointsKey] = []
-    temp_list = [create_dictionary_of_data_points()]
+    temp_list = [params]
     db.cache[dataPointsKey] = temp_list
     print('cache created')
     db.cache.close()
@@ -62,24 +63,18 @@ def read_from_db():
 
 def print_parameters():
     print("=================================")
-    print("No of threads: " + str(noOfThreads))
-    print("Matrix size: " + str(matrixSize))
-    print("block size: " + str(blockSize))
-    print("Chunk size or num of blocks: " + str(chunkSize))
+    print(params)
     print("=================================")
 
 
 if __name__ == '__main__':
     # run_and_parse_blazemark()
-    print("Usage: %s no_of_threads matrix_size block_size chunk_size" % sys.argv[0])
-    if len(sys.argv) > 1:
-        noOfThreads = int(sys.argv[1])
-    if len(sys.argv) > 2:
-        matrixSize = int(sys.argv[2])
-    if len(sys.argv) > 3:
-        blockSize = int(sys.argv[3])
-    if len(sys.argv) > 4:
-        chunkSize = int(sys.argv[4])
+    print("Usage: %s key value ..." % sys.argv[0])
+    i = 1
+    params.clear()
+    while (i + 1) < len(sys.argv):
+        params[sys.argv[i]] = int(sys.argv[i+1])
+        i = i + 2
 
     print_parameters()
 
