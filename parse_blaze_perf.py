@@ -1,3 +1,4 @@
+import json
 import re
 import sys
 from subprocess import Popen, PIPE
@@ -5,12 +6,8 @@ import diskcache
 
 diskCacheFile = "test"
 dataPointsKey = "data_points"
-
 params = dict()
-noOfThreads = 8
-matrixSize = 200
-blockSize = 4
-chunkSize = 50
+
 
 def run_and_parse_blazemark():
     stepsLineParser = re.compile(r'\s+N=(\d+),\s+steps=\d+')
@@ -37,15 +34,6 @@ def load_database():
     return diskcache.Index(diskCacheFile + ".diskCacheIndex")
 
 
-def create_dictionary_of_data_points():
-    return {
-        'threads': noOfThreads,
-        'matrix': matrixSize,
-        'block': blockSize,
-        'chunk': chunkSize
-    }
-
-
 def prepare_the_db():
     db = load_database()
     if dataPointsKey not in db.cache:
@@ -70,11 +58,10 @@ def print_parameters():
 if __name__ == '__main__':
     # run_and_parse_blazemark()
     print("Usage: %s key value ..." % sys.argv[0])
-    i = 1
+
     params.clear()
-    while (i + 1) < len(sys.argv):
-        params[sys.argv[i]] = int(sys.argv[i+1])
-        i = i + 2
+    with open('params.json') as f:
+        params = json.load(f)
 
     print_parameters()
 
