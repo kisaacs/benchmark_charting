@@ -1,7 +1,6 @@
 import re
 from subprocess import Popen, PIPE
 import diskcache
-import sqlite3
 
 
 def run_and_parse_blazemark():
@@ -38,28 +37,9 @@ def prepare_the_db():
     cc.cache.close()
 
 
-def prepare_the_db_sqlite():
-    connection = sqlite3.connect("test.db")
-    cursor = connection.cursor()
-    # cursor.execute("CREATE TABLE fish (name TEXT, species TEXT, tank_number INTEGER)")
-    cursor.execute("INSERT INTO fish VALUES ('Sammy', 'shark', 1)")
-    cursor.execute("INSERT INTO fish VALUES ('Jamie', 'cuttle', 3)")
-    # rows = cursor.execute("SELECT * FROM fish").fetchall()
-    # print(rows)
-    connection.commit()
-    connection.close()
-
-
 def read_from_db():
     cd = diskcache.Index("test.diskCacheIndex")
     print(cd.cache['nd'])
-
-
-def read_from_db_sqlite():
-    connection = sqlite3.connect("test.db")
-    cursor = connection.cursor()
-    rows = cursor.execute("SELECT * FROM fish").fetchall()
-    print(rows)
 
 
 if __name__ == '__main__':
@@ -67,6 +47,3 @@ if __name__ == '__main__':
 
     prepare_the_db()
     read_from_db()
-
-    # prepare_the_db_sqlite()
-    # read_from_db_sqlite()
