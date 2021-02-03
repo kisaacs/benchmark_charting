@@ -10,8 +10,8 @@ Since this is just a name-value store, need to find out what makes this tool spe
 what makes this good?
 
 - separate MPI, glib, osx, posix, unix library interfacing
-
-#### Ways data can be fetched
+----
+### Ways data can be fetched
 
 - Command line parameters
 - Separate file
@@ -19,13 +19,13 @@ what makes this good?
 - Provide a callback functions (Adiak used this approach)
 
 
-#### Things to address
+### Things to address
 - How to collect data from the user
 - Store and organize the data
 - Pass that value to the benchmark tools 
 - collect information from the benchmark tools 
 
-##### Idea
+#### Idea
 user data can be collected directly from the benchmark tools (test its viability and practicality using the blazemark in Rostam)
 
 Pros
