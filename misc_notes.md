@@ -58,4 +58,4 @@ Ways to do this
 ### What to do under the hood
 With the moto: *define ones, use multiple times*.
 
-- Let users define multiple parameters, and their value range. Automatically generate all possible combination of  
+- Let users define multiple parameters, and their value range. Automatically generate all possible combination of parameter list.
