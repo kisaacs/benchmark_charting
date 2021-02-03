@@ -10,7 +10,6 @@ class ChartingDataModel:
         self.connection = None
         self.cursor = None
         self.open_database()
-        self.create_charts_table()
         self.create_data_points_table()
         self.create_settings_table()
         self.close_database()
@@ -34,29 +33,19 @@ class ChartingDataModel:
         print(table_name + ' table does not exist.')
         return True
 
-    def create_charts_table(self):
-        return self.create_table_if_not_exist("charts",
-                                              "uuid         VARCHAR(40)  PRIMARY KEY, "
-                                              "create_time  TIMESTAMP    NOT NULL, "
-                                              "user         VARCHAR(40)  DEFAULT NULL, "
-                                              "chart_name   VARCHAR(200) DEFAULT NULL, "
-                                              "x_title      VARCHAR(200) DEFAULT NULL, "
-                                              "y_title      VARCHAR(200) DEFAULT NULL, "
-                                              "legends      VARCHAR(200) DEFAULT NULL")
-
     def create_data_points_table(self):
         return self.create_table_if_not_exist("data_points",
                                               "uuid        VARCHAR(40) PRIMARY KEY, "
-                                              "chart_id    VARCHAR(40),"
+                                              "s_id        VARCHAR(40),"
                                               "create_time TIMESTAMP, "
                                               "platform    VARCHAR(200) DEFAULT NULL, "
                                               "x_value     VARCHAR(200) DEFAULT NULL, "
                                               "y_value     VARCHAR(200) DEFAULT NULL, "
-                                              "legends     TEXT DEFAULT NULL, "
-                                              "FOREIGN KEY(chart_id) REFERENCES charts(uuid)")
+                                              "FOREIGN KEY(s_id) REFERENCES settings(uuid)")
 
     def create_settings_table(self):
         return self.create_table_if_not_exist("settings",
+                                              "uuid  VARCHAR(40) PRIMARY KEY, "
                                               "key   VARCHAR(40), "
                                               "value TEXT DEFAULT NULL")
 

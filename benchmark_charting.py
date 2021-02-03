@@ -10,6 +10,7 @@ def test_data_model():
     ch.add_chart_legends(db,"Mflops", 50)
     ch.add_chart_legends(db,"threads", 8)
     ch.add_chart_legends(db,"block_size", 10, 20, 5)
+    ch.add_chart_x_axis(db,"chunk_size", 3)
     # still need to do some work to safely update x_values and legends
     # n_uid = c.create_chart("my_chart")
     # c.add_new_datapoint(n_uid, "blazemark")
