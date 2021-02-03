@@ -6,10 +6,10 @@
 - Tools are being stored in a doubly-linked-list type data structure.
 - Used category (hardcoded 4 types) and subcategory (user provided) to organize the name-value pairs
 
-Since this is just a name-value store, what makes this tool special compared to other sophisticated C++ STL library or other data structures?
+Since this is just a name-value store, need to find out what makes this tool special compared to other sophisticated C++ STL libraries?
 what makes this good?
 
-- spearate MPI, glib, osx, posix, unix library interfacing
+- separate MPI, glib, osx, posix, unix library interfacing
 
 #### Ways data can be fetched
 
