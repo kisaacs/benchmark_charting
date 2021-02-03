@@ -47,7 +47,15 @@ Ways to do this
 ### Use cases
 - add/update/delete any number of parameters and measurements (possibly in key-value format)
 - take a subset of the parameters and measurements from an old run and generate a new dataset
+- take a subset of the parameters and generate new measurements
+- swap different parameters and measurements
 - view measurements and parameters from an old benchmark run
-- add/update/delete different benchmarking tools
-- get measurement data from multiple benchmarking tools and save the measurements
+- add/remove different benchmarking tools
+- get measurement data from multiple benchmarking tools (possibly from a subset of the tools which are added) and save the measurements
 - share the data or a subset of the data
+
+
+### What to do under the hood
+With the moto: *define ones, use multiple times*.
+
+- Let users define multiple parameters, and their value range. Automatically generate all possible combination of  
