@@ -44,7 +44,7 @@ Ways to do this
 - Dump benchmark output to a file and read it from there
 
 
-#### Use cases
+### Use cases
 - add/update/delete any number of parameters and measurements (possibly in key-value format)
 - take a subset of the parameters and measurements from an old run and generate a new dataset
 - view measurements and parameters from an old benchmark run
