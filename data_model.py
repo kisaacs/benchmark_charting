@@ -69,7 +69,7 @@ class ChartingDataModel:
         self.open_database()
         if n_uid is None:
             n_uid = str(uuid.uuid4())
-        t_uid = str(uuid.uuid4())
+        t_uid = str(uuid.uuid4()).replace("-", "_")
         self.cursor.execute("REPLACE INTO benchmark_log (uuid, create_time, user, m_flag, table_id) VALUES (?,?, ?,?,?)",
                             (n_uid, datetime.datetime.now(), user, m_flag, t_uid))
         self.close_database()
@@ -95,4 +95,16 @@ class ChartingDataManager:
             for v in param["values"]:
                 db.add_settings(param["name"], v)
         self.update_log_values(db)
+        # need to automate the following
+        db.open_database()
+        db.cursor.execute("CREATE TABLE test_" + self.table_id + " AS "
+                          "SELECT s1.value threads, s2.value block_size, 0 chunk_size "
+                          "FROM "
+                          "settings s1 JOIN settings s2 JOIN settings s3 "
+                          "WHERE s1.key = 'threads' "
+                          "AND "
+                          "s2.key = 'block_size' "
+                          "AND s3.key = 'chunk_size' "
+                          "AND s2.value BETWEEN 10 and 20")
+        db.close_database()
 

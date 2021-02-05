@@ -35,7 +35,6 @@
   this row.  
 
 ----
-New stuffs below this line
 
 ### Conceptions
 
