@@ -55,7 +55,7 @@ Ways to do this
 - share the data or a subset of the data
 
 
-### What to do under the hood
-With the moto: *define ones, use multiple times*.
+### Moto or Ideals:
 
-- Let users define multiple parameters, and their value range. Automatically generate all possible combination of parameter list.
+- define ones, use multiple times
+- data management and organization is more important than performance

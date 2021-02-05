@@ -10,7 +10,7 @@ class ChartingDataModel:
         self.connection = None
         self.cursor = None
         self.open_database()
-        self.create_data_points_table()
+        self.create_benchmark_log_table()
         self.create_settings_table()
         self.close_database()
 
@@ -33,15 +33,13 @@ class ChartingDataModel:
         print(table_name + ' table does not exist.')
         return True
 
-    def create_data_points_table(self):
-        return self.create_table_if_not_exist("data_points",
+    def create_benchmark_log_table(self):
+        return self.create_table_if_not_exist("benchmark_log",
                                               "uuid        VARCHAR(40) PRIMARY KEY, "
-                                              "s_id        VARCHAR(40),"
                                               "create_time TIMESTAMP, "
-                                              "platform    VARCHAR(200) DEFAULT NULL, "
-                                              "x_value     VARCHAR(200) DEFAULT NULL, "
-                                              "y_value     VARCHAR(200) DEFAULT NULL, "
-                                              "FOREIGN KEY(s_id) REFERENCES settings(uuid)")
+                                              "user        VARCHAR(40) DEFAULT NULL, "
+                                              "m_flag      INT DEFAULT 0,"
+                                              "table_id    VARCHAR(200) DEFAULT NULLs")
 
     def create_settings_table(self):
         return self.create_table_if_not_exist("settings",
@@ -51,92 +49,50 @@ class ChartingDataModel:
 
     def add_settings(self, key, value):
         self.open_database()
-        if self.cursor.execute("SELECT 1 FROM settings WHERE key = '" + key + "'").fetchone():
-            self.cursor.execute("UPDATE settings SET value = ? WHERE key = ?", (value, key))
-        else:
-            self.cursor.execute("INSERT INTO settings VALUES (?,?)", (key, value))
+        # if self.cursor.execute("SELECT 1 FROM settings WHERE key = '" + key + "'").fetchone():
+        #     self.cursor.execute("UPDATE settings SET value = ? WHERE key = ?", (value, key))
+        # else:
+        self.cursor.execute("INSERT INTO settings VALUES (?,?,?)", (str(uuid.uuid4()), key, value))
         self.close_database()
-
-    def create_chart(self, name, x_title=None, y_title=None, legends=None, n_uid=None, user=None):
-        self.open_database()
-        if n_uid is None:
-            n_uid = str(uuid.uuid4())
-        self.cursor.execute("REPLACE INTO charts (uuid, create_time, user, chart_name, x_title, y_title, legends) VALUES (?,?, ?,?, ?,?,?)",
-                            (n_uid, datetime.datetime.now(), user, name, x_title, y_title, legends))
-        self.close_database()
-        return n_uid
 
     def add_new_datapoint(self, c_id, platform=None):
         self.open_database()
         n_uid = str(uuid.uuid4())
-        self.cursor.execute("INSERT INTO data_points (uuid, chart_id, create_time, platform) VALUES (?,?,?,?)",
-                            (n_uid, c_id, datetime.datetime.now(), platform))
+        t_uid = str(uuid.uuid4())
+        user = "admin"
+        self.cursor.execute("INSERT INTO benchmark_log (uuid, create_time, table_id) VALUES (?,?,?,?)",
+                            (n_uid, datetime.datetime.now(), t_uid))
         self.close_database()
-        return n_uid
+        return t_uid
 
-    def update_datapoint_x(self, c_id, value):
+    def update_log(self, n_uid=None, user=None, m_flag=0):
         self.open_database()
-        if self.cursor.execute("SELECT 1 FROM data_points WHERE chart_id = '" + c_id + "'").fetchone():
-            self.cursor.execute("UPDATE data_points SET x_value = ? WHERE chart_id = ?", (value, c_id))
-        else:
+        if n_uid is None:
             n_uid = str(uuid.uuid4())
-            self.cursor.execute("INSERT INTO data_points (uuid, chart_id, create_time, x_value) VALUES (?,?,?,?)",
-                                (n_uid, c_id, datetime.datetime.now(), value))
+        t_uid = str(uuid.uuid4())
+        self.cursor.execute("REPLACE INTO benchmark_log (uuid, create_time, user, m_flag, table_id) VALUES (?,?, ?,?,?)",
+                            (n_uid, datetime.datetime.now(), user, m_flag, t_uid))
         self.close_database()
-
-    def update_datapoint_y(self, c_id, value):
-        self.open_database()
-        self.cursor.execute("UPDATE data_points SET y_value = ? WHERE chart_id = ?", (value, c_id))
-        self.close_database()
-
-    def update_datapoint_legends(self, c_id, key, value, end=None, interval=None):
-        if interval is None:
-            interval = 1
-        if end is None:
-            end = value
-        self.open_database()
-        nv = {key: value}
-        old_legends = self.cursor.execute("SELECT * FROM data_points WHERE chart_id = '" + c_id + "'").fetchall()
-        for row in old_legends:
-            if row[6] is not None:
-                nv = json.loads(row[6])
-            for x in range(value, end+1, interval):
-                nv[key] = x
-                if x == value:
-                    self.cursor.execute("REPLACE INTO data_points (uuid, chart_id, create_time, legends, platform, x_value, y_value) VALUES (?,?,?,?, ?,?,?)",
-                                        (row[0], c_id, datetime.datetime.now(), json.dumps(nv), row[3], row[4], row[5]))
-                else:
-                    self.cursor.execute("INSERT INTO data_points (uuid, chart_id, create_time, legends, platform, x_value, y_value) VALUES (?,?,?,?, ?,?,?)",
-                                        (str(uuid.uuid4()), c_id, datetime.datetime.now(), json.dumps(nv), row[3], row[4], row[5]))
-
-        if not old_legends:
-            for x in range(value, end+1, interval):
-                nv[key] = x
-                n_uid = str(uuid.uuid4())
-                self.cursor.execute("INSERT INTO data_points (uuid, chart_id, create_time, legends) VALUES (?,?,?,?)",
-                                    (n_uid, c_id, datetime.datetime.now(), json.dumps(nv)))
-        self.close_database()
+        return n_uid, t_uid
 
 
-class ChartWrapper:
-    def __init__(self, c_name="Plot", x=None, y=None, u=None):
-        self.chart_name = c_name
-        self.chart_id = 'c5e912aa-32d5-4f07-b73f-7cf3da5fd0d9'
+class ChartingDataManager:
+    def __init__(self, u=None):
+        self.log_id = None
         self.create_time = None
         self.user = u
-        self.x_title = x
-        self.y_title = y
-        self.legends = None # this is in json
+        self.m_flag = 0
+        self.table_id = None
 
-    def update_chart_values(self, db):
-        self.chart_id = db.create_chart(self.chart_name, self.x_title, self.y_title, self.legends, self.chart_id, self.user)
+    def update_log_values(self, db):
+        self.log_id, self.table_id = db.update_log(m_flag=self.m_flag)
+        print(self.log_id)
+        print(self.table_id)
 
-    def add_chart_legends(self, db, key, value, end=None, interval=None):
-        self.update_chart_values(db)
-        if key == self.x_title:
-            db.update_datapoint_x(self.chart_id, value)
-        elif key == self.y_title:
-            db.update_datapoint_y(self.chart_id, value)
-        else: # it will always go to legends
-            # no need to check if already exist first
-            db.update_datapoint_legends(self.chart_id, key, value, end, interval)
+    def add_new_measurements(self, db, param_list, flag):
+        self.m_flag = flag
+        for i, param in enumerate(param_list):
+            for v in param["values"]:
+                db.add_settings(param["name"], v)
+        self.update_log_values(db)
+

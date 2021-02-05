@@ -34,14 +34,19 @@
  name from this column, and then, find the executable file location from the settings table, and then it will run that executable file with the values of
   this row.  
 
-### This bencharmk charting library will provide convenient functions
-(A user should be able to use these functions from the Jupyter notebook just by importing this library)
-- Create a blank chart (provide chart name, x-axis title, y-axis title, legends, etc. Specifically this will add an entry in the `charts` table)
-- Add a datapoint in the chart (This will add an entry in the `data_points` table)
-- Add legends in the chart (it will create multiple data points for all possible combination of legend parameters and insert them in the `data_points` table)
-- Update or remove legends.
-- Swap a specific legend 
-- Add benchmark platform (This will add the location of the executable file and required arguments in the `settings` table)
-- Run benchmark for specific data points (from the `data_points` table, this will update the `y_value` column)
-- Generate plot (from an entry in the `charts` table)
+----
+New stuffs below this line
 
+### Conceptions
+
+- Let users define multiple parameters, and their value range. Automatically generate all possible combination of parameter list.
+- Create a new table with unique id for a set of parameters and measurements.
+- parameters and measurements should be provided as a list of {name: values}, here values should also be a list containing a set of values for that
+ parameters names.
+- no need to store range information, It can be retrieved later from the new table.
+- Store measurement flag in an integer value (1 for measurement, 0 for parameter). upto 64 parameters information can be stored in this fashion. if needed more
+, an array of
+ integer values could be used. (stored `m_flag` column in `benchmark_log` table)
+- Ordering for this flag is as they appear in the parameters list.
+- Create a new table *benchmark_log* which will hold columns (uuid, create_time, user, m_flag, table_id)
+- you can make key, value pair in the settings table as primary key. 
