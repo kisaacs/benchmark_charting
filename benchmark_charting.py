@@ -8,7 +8,7 @@ def test_data_model():
 
     param_list = []
     param_list.append({"name": "threads", "values": [8]})
-    param_list.append({"name": "block_size", "values": [10, 20, 30, 40, 50, 60]})
+    param_list.append({"name": "block_size", "values": [10, 20, 30, 40, 50, 70]})
     param_list.append({"name": "chunk_size", "values": [3, 5]})
     ch = ChartingDataManager("admin")
     ch.add_new_measurements(db, param_list, 1)
