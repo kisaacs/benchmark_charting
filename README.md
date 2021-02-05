@@ -47,5 +47,4 @@
 , an array of
  integer values could be used. (stored `m_flag` column in `benchmark_log` table)
 - Ordering for this flag is as they appear in the parameters list.
-- Create a new table *benchmark_log* which will hold columns (uuid, create_time, user, m_flag, table_id)
-- you can make key, value pair in the settings table as primary key. 
+- Create a new table *benchmark_log* which will hold columns (uuid, create_time, user, m_flag, table_id). Here *table_id* is the newly generated table id. 
