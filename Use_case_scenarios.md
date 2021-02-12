@@ -11,7 +11,9 @@
 - inline code or markup
 - Standard command line output
 - Any debugger tool (ex. using *gdb* with `info local` command)
+- From the log data of any 3rd party analytic tool
 - Old document (really old run where the results were reported formally as a PDF document or powerpoint slide)
+
 
 ##### Additional data not used as a parameter for the program during the benchmark run but still require to capture
 
@@ -37,6 +39,14 @@
 
 
 ### Some Step by Step process
+
+Scenario 0
+1.	Use inline parameters
+2.	Import different program (what’s performance is needed to measure)
+3.	Comment in/out related portion
+4.	Calculate required measured values
+5.  Plot using any plotter library (matplotlib, plotly, etc.) 
+
 Scenario 1
 1.	Use inline parameters
 2.	Import different program (what’s performance is needed to measure)
@@ -45,14 +55,14 @@ Scenario 1
 a.	Directly to a file
 b.	To a command line as stdout, then redirect the output to a file
 5.	Read the measured value from the file with that specific format parser and write it out to another CSV file in specific plot configuration.
-6.	Open that CSV file in plotter program.
+6.	Open that CSV file in plotter program (Excel or OriginPro).
 
 Scenario 2
 1.	Write a profiler (a separate program) to run the program a specific number of times and output its measurement values in a specific format.
 2.	Let the profiler read from a config file.
 3.	Run the profiler and output to a file.
 4.	Make the filename related to the input parameters.
-5.	Manually copy paste the measured values and parameters in the plotter program.
+5.	Manually copy paste the measured values and parameters in the plotter program(Excel or OriginPro).
 
 Scenario 3 (with some kind of visual tool running over backend API accessible through url)
 1.	Intercept URLs.
@@ -70,7 +80,7 @@ Scenario 5
 2.	Use a benchmark program which will read from the config file.
 3.	The benchmark program runs an intended program a specific number of times and output (stdout) its measurement values in its default output format.
 4.	Read the measured value from the file with that specific format parser and write it out to another CSV file in specific plot configuration.
-5.	Open that CSV file in plotter program.
+5.	Open that CSV file in plotter program(Excel or OriginPro).
 
 Scenario 6
 1.	Manually run the benchmark in machine1 and dump the output to a file
@@ -98,3 +108,18 @@ Scenario 9
 3.	If done on multiple machines, then move all output file in a central location.
 4.	Combine the output file and make a single file with the measurements and parameters
 5.	Parse and prepare it for plotting
+
+Scenario 10
+1.	Save the data described from any above mentioned scenario
+2.  Rerun with the exact parameters to get the same measurements again.
+3.  Save the measurements
+
+Scenario 11
+1.	Save the data described from any above mentioned scenario
+2.  Rerun with some additional parameters to get the same measurements again.
+3.  Save the measurements  
+
+Scenario 12
+1.	Save the data described from any above mentioned scenario
+2.  Rerun with some additional parameters to get the new measurements.
+3.  Save the measurements  
