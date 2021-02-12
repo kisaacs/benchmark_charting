@@ -10,6 +10,8 @@
 - URLs (not from the response, from the URL itself)
 - inline code or markup
 - Standard command line output
+- Any predefined database (mysql, postgresql, nosql, etc.)
+- Object of any class when using any additional library
 - Any debugger tool (ex. using *gdb* with `info local` command)
 - From the log data of any 3rd party analytic tool
 - Old document (really old run where the results were reported formally as a PDF document or powerpoint slide)
