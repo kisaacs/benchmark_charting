@@ -3,7 +3,7 @@
 
 Table of Contents
 
-* [Scenario 0](#7f8a)
+* [Scenario 0](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-manual-function)
 
 * [Scenario 1](#3738)
 
