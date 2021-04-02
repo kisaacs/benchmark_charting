@@ -3,55 +3,55 @@
 
 Table of Contents
 
-* [Scenario 0](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-manual-function)
+* [Scenario 0](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-benchmarking-function-manually)
 
-* [Scenario 1](#3738)
+* [Scenario 1](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-1-benchmarking-library-manually)
 
-* [Scenario 2](#f966)
+* [Scenario 2](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-2-benchmarking-executable-file-manually)
 
-* [Scenario 3](#4bf2)
+* [Scenario 3](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-3-benchmarking-executable-file-automatically)
 
-* [Scenario 4](#cb14)
+* [Scenario 4](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-4-manually-benchmarking-executable-file-with-output-file)
 
-* [Scenario 5](#1949)
+* [Scenario 5](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-5-manually-benchmarking-executable-file-with-output-file-parser)
 
-* [Scenario 6](#838f)
+* [Scenario 6](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-6-automatically-benchmarking-executable-file-with-output-file)
 
-* [Scenario 7](#f389)
+* [Scenario 7](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-7-automatically-benchmarking-executable-file-with-input-and-output-file)
 
-* [Scenario 8](#5ce6)
+* [Scenario 8](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-8-automatically-benchmarking-executable-file-with-input-file)
 
-* [Scenario 9](#2a8a)
+* [Scenario 9](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-9-manually-benchmarking-executable-file-with-input-file)
 
-* [Scenario 10](#4db2)
+* [Scenario 10](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-10-manually-benchmarking-executable-url)
 
-* [Scenario 11](#c839)
+* [Scenario 11](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-11-manually-benchmarking-executable-url-with-output-file)
 
-* [Scenario 12](#c092)
+* [Scenario 12](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-12-manually-benchmarking-executable-file-with-benchmark-tool)
 
-* [Scenario 13](#5fd2)
+* [Scenario 13](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-13-manually-benchmarking-executable-file-with-benchmark-tool-and-input-file)
 
-* [Scenario 14](#cf77)
+* [Scenario 14](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-14-automatically-benchmarking-executable-file-with-benchmark-tool-and-input-file)
 
-* [Scenario 15](#0bfc)
+* [Scenario 15](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-15-automatically-benchmarking-executable-file-with-benchmark-tool-input-and-output-file)
 
-* [Scenario 16](#96cc)
+* [Scenario 16](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-16-manually-benchmark-in-multiple-machines)
 
-* [Scenario 17](#6744)
+* [Scenario 17](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-17-automatically-benchmark-in-multiple-machines)
 
-* [Scenario 18](#44ce)
+* [Scenario 18](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-18-automatically-benchmark-in-multiple-machines-with-multiple-benchmark-tools-and-input-files)
 
-* [Scenario 19](#68b3)
+* [Scenario 19](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-19-same-parameter-values-and-same-measurement-types)
 
-* [Scenario 20](#6508)
+* [Scenario 20](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-20-same-parameter-values-and-new-measurement-types)
 
-* [Scenario 21](#d21a)
+* [Scenario 21](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-21-additional-parameter-values-and-same-measurement-types)
 
-* [Scenario 22](#2eba)
+* [Scenario 22](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-22-new-parameter-types-and-same-measurement-types)
 
-* [Scenario 23](#eccd)
+* [Scenario 23](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-23-new-parameter-and-measurement-types)
 
-* [Scenario 24](#cec1)
+* [Scenario 24](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-24-subset-of-the-data)
 
 ### Scenario 0 (Benchmarking Function Manually)
 
@@ -147,17 +147,20 @@ She writes a benchmark script, where she initializes the 3 parameters and passes
 
 ##### Benchmark the programs:
 
-She benchmarks the programs with different parameters ([similar to Scenario 0).](#4be6)
+She benchmarks the programs with different parameters similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#benchmark-the-programs).
 
 ##### Manually record measurements:
 
-She [manually records measurements similar to Scenario 0](#8c89).
+She manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*f2UGo-T3c33Fji_fYrqOrg.jpeg)
+![](./figs/flowchart-s1.jpg)
 
 ### Scenario 2 (Benchmarking Executable File Manually)
 
@@ -179,19 +182,22 @@ Robin measures the running time using *time* command in shell to print out the m
 
 ##### Manually record measurements:
 
-She [manually records measurements similar to Scenario 0](#8c89).
+She manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*UAOGwRaZZJrG9blafBKHFw.jpeg)
+![](./figs/flowchart-s2.jpg)
 
 ### Scenario 3 (Benchmarking Executable File Automatically)
 
 ##### Prepare executables and parameters:
 
-She [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark script for executables:
 
@@ -232,13 +238,14 @@ She executes the benchmark script. The *measurements* dictionary stores each mea
 
 Lastly, she generates different charts from the values of the *measurements* dictionary.
 
-![](https://cdn-images-1.medium.com/max/2000/1*uAaXhnXQ9qUN6IphtuARQA.jpeg)
+![](./figs/flowchart-s3.jpg)
 
 ### Scenario 4 (Manually Benchmarking Executable File with Output File)
 
 ##### Prepare executables and parameters:
 
-She [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Benchmark the programs and output results to a file:
 
@@ -250,27 +257,31 @@ From a command line window, she runs each of the executable files separately wit
 
 ##### Manually record measurements:
 
-She copies the measurement values from the output file and [manually records measurements similar to Scenario 0](#8c89).
+She copies the measurement values from the output file and manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*iDh6_WEC6eRLJMekPyE96Q.jpeg)
+![](./figs/flowchart-s4.jpg)
 
 ### Scenario 5 (Manually Benchmarking Executable File with Output File Parser)
 
 ##### Prepare executables and parameters:
 
-She [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Benchmark the programs and output results to a file:
 
-She [Benchmarks the programs and output results to a file similarly to Scenario 4.](#eb8f)
+She benchmarks the programs and output results to a file similarly to
+[Manually Benchmarking Executable File with Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#benchmark-the-programs-and-output-results-to-a-file).
 
 ##### Record measurements:
 
-Robin writes another program “Record_All_Runs” in python, where she declares 6 arrays ([as a list like this](#fcb2)). Three of the arrays are for the parameters and 3 for the measurement values. Then she opens the output file (using the “open” function of python), reads each value, and assigns the measurements into respective arrays.
+Robin writes another program “Record_All_Runs” in python, where she declares 6 arrays ([as a list like this](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements)). Three of the arrays are for the parameters and 3 for the measurement values. Then she opens the output file (using the “open” function of python), reads each value, and assigns the measurements into respective arrays.
 
     line_count = 0
     with open("outfile") as fp:
@@ -288,15 +299,17 @@ Robin writes another program “Record_All_Runs” in python, where she declares
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*KG7-SOxZcSYBZNA4ZxPXxA.jpeg)
+![](./figs/flowchart-s5.jpg)
 
 ### Scenario 6 (Automatically Benchmarking Executable File with Output File)
 
 ##### Prepare executables and parameters:
 
-She [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark script for executables:
 
@@ -346,7 +359,7 @@ Robin executes the benchmark script. Then, she writes another program called “
 
 Lastly, she generates different charts from the values of the *params_and_measures*.
 
-![](https://cdn-images-1.medium.com/max/2000/1*GgkVRa1gWCkH4GbV19lf0A.jpeg)
+![](./figs/flowchart-s6.jpg)
 
 ### Scenario 7 (Automatically Benchmarking Executable File with Input and Output File)
 
@@ -396,13 +409,14 @@ Robin executes the benchmark script. Then, she writes another program “Record_
 
 Lastly, she generates different charts by combining the values of the *params* and *measures*.
 
-![](https://cdn-images-1.medium.com/max/2000/1*aL188QsH8mx7doULPuShQw.jpeg)
+![](./figs/flowchart-s7.jpg)
 
 ### Scenario 8 (Automatically Benchmarking Executable File with Input File)
 
 ##### Prepare executables that read parameters from an input file:
 
-Robin [prepares executables that reads parameters from an input file similarly to Scenario 7.](#4a3e)
+Robin prepares executables that reads parameters from an input file similarly to
+[Automatically Benchmarking Executable File with Input and Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-that-read-parameters-from-an-input-file).
 
 ##### Prepare a benchmark script for executables:
 
@@ -438,13 +452,14 @@ She runs the “Do_All_Runs” script times and stores the measurements along wi
 
 By combining the variables *params* and *measures*, Robin generates different charts.
 
-![](https://cdn-images-1.medium.com/max/2000/1*UfXx4TpF-IWSstIjDz5jvg.jpeg)
+![](./figs/flowchart-s8.jpg)
 
 ### Scenario 9 (Manually Benchmarking Executable File with Input File)
 
 ##### Prepare executables that read parameters from an input file:
 
-Robin [prepares executables that reads parameters from an input file similarly to Scenario 7.](#4a3e)
+Robin prepares executables that reads parameters from an input file similarly to
+[Automatically Benchmarking Executable File with Input and Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-that-read-parameters-from-an-input-file).
 
 ##### Benchmark the programs:
 
@@ -460,13 +475,15 @@ Robin measures the running time using *time* command in shell to print out the m
 
 ##### Manually record measurements:
 
-She [manually records measurements similar to Scenario 0](#8c89).
+She manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*NviTuEyyVHAmEPPXb6qSnQ.jpeg)
+![](./figs/flowchart-s9.jpg)
 
 ### Scenario 10 (Manually Benchmarking Executable URL)
 
@@ -482,13 +499,15 @@ Robin runs the Perfecto executable by calling the URL and passing 3 parameters u
 
 ##### Manually record measurements:
 
-She [manually records measurements similar to Scenario 0](#8c89).
+She manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*79uHuQa8crn4PQGRQoDRUQ.jpeg)
+![](./figs/flowchart-s10.jpg)
 
 ### Scenario 11 (Manually Benchmarking Executable URL with Output File)
 
@@ -517,15 +536,17 @@ She manually reads the inspection log file, parses specific parameters and measu
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*PAizqAszCuRVX8ApVyftTA.jpeg)
+![](./figs/flowchart-s11.jpg)
 
 ### Scenario 12 (Manually Benchmarking Executable File with Benchmark Tool)
 
 ##### Prepare executables and parameters:
 
-She [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark tool:
 
@@ -533,23 +554,27 @@ Now, Robin uses a benchmarking tool which can run a set of executable files a pr
 
 ##### Manually record measurements:
 
-She [manually records measurements similar to Scenario 0](#8c89).
+She manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
 
-![](https://cdn-images-1.medium.com/max/2000/1*Lz8QRsFW1Hqdk0ti-UQG5A.jpeg)
+![](./figs/flowchart-s12.jpg)
 
 ### Scenario 13 (Manually Benchmarking Executable File with Benchmark Tool and Input File)
 
 ##### Prepare executables and parameters:
 
-She [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark tool that reads from an input file:
 
-Now, Robin uses a benchmark tool which can read input parameters from a configuration file. The configuration file stores different parameters and the base path of the executables with which the benchmark will need to run Now consider, the configuration file, *infile*, is in JSON format which could be evaluated into python dictionary. The benchmark program prints out the results in standard output.
+Now, Robin uses a benchmark tool which can read input parameters from a configuration file. The configuration file stores different parameters and the base
+ path of the executables with which the benchmark will need to run. Now consider, the configuration file, *infile*, is in JSON format which could be evaluated into python dictionary. The benchmark program prints out the results in standard output.
 
 ##### Benchmark the programs:
 
@@ -557,21 +582,27 @@ She manually runs the benchmark program in the command line with different param
 
 ##### Manually record measurements:
 
-She [manually records measurements similar to Scenario 0](#8c89).
+She manually records measurements similar to 
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 0](#4ee0).
+She creates plots similar to
+[Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot).
+
+![](./figs/flowchart-s13.jpg)
 
 ### Scenario 14 (Automatically Benchmarking Executable File with Benchmark Tool and Input File)
 
 ##### Prepare executables and parameters:
 
-Robin [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark tool that reads from an input file:
 
-She [prepares a benchmark tool that reads from an input file similarly to Scenario 13.](#f0c5)
+She prepares a benchmark tool that reads from an input file similarly to
+[Manually Benchmarking Executable File with Benchmark Tool and Input File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-a-benchmark-tool-that-reads-from-an-input-file).
 
 ##### Prepare a benchmark script for benchmark tool:
 
@@ -600,15 +631,19 @@ She runs the “Do_All_Runs” script times and stores the measurements along wi
 
 Lastly, she generates different charts with the measurements and parameters.
 
+![](./figs/flowchart-s14.jpg)
+
 ### Scenario 15 (Automatically Benchmarking Executable File with Benchmark Tool, Input and Output File)
 
 ##### Prepare executables and parameters:
 
-Robin [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark tool that reads from an input file:
 
-She [prepares a benchmark tool that reads from an input file similarly to Scenario 13.](#f0c5)
+She prepares a benchmark tool that reads from an input file similarly to
+[Manually Benchmarking Executable File with Benchmark Tool and Input File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-a-benchmark-tool-that-reads-from-an-input-file).
 
 ##### Benchmark the programs and output results to a file:
 
@@ -628,15 +663,19 @@ She writes another program “Record_All_Runs” in python, where she opens the 
 
 Lastly, she generates different charts by combining the values of the *params* and *measures*.
 
+![](./figs/flowchart-s15.jpg)
+
 ### Scenario 16 (Manually Benchmark in Multiple Machines)
 
 ##### Prepare executables and parameters:
 
-Robin [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark tool that reads from an input file:
 
-She [prepares a benchmark tool that reads from an input file similarly to Scenario 13.](#f0c5)
+She prepares a benchmark tool that reads from an input file similarly to
+[Manually Benchmarking Executable File with Benchmark Tool and Input File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-a-benchmark-tool-that-reads-from-an-input-file).
 
 ##### Benchmark the programs in remote machine and output results to a file:
 
@@ -655,15 +694,19 @@ Robin copies the input configuration and output files from remote machines, move
 
 Lastly, she generates different charts by combining the values of the *params* and *measures*.
 
+![](./figs/flowchart-s16.jpg)
+
 ### Scenario 17 (Automatically Benchmark in Multiple Machines)
 
 ##### Prepare executables and parameters:
 
-Robin [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a benchmark tool that reads from an input file:
 
-She [prepares a benchmark tool that reads from an input file similarly to Scenario 13.](#f0c5)
+She prepares a benchmark tool that reads from an input file similarly to
+[Manually Benchmarking Executable File with Benchmark Tool and Input File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-a-benchmark-tool-that-reads-from-an-input-file).
 
 ##### Prepare a benchmark script:
 
@@ -684,21 +727,27 @@ Robin writes a shell script to run the benchmark tool in multiple machines, gene
 
 ##### Benchmark the programs and record measurements:
 
-She [benchmarks the programs and record measurements similarly to scenario 7.](#0fd3)
+She benchmarks the programs and record measurements similarly to
+[Automatically Benchmarking Executable File with Input and Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#benchmark-the-programs-and-record-measurements-2).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 7](#dc03).
+She creates plots similarly to
+[Automatically Benchmarking Executable File with Input and Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot-7).
+
+![](./figs/flowchart-s17.jpg)
 
 ### Scenario 18 (Automatically Benchmark in Multiple Machines with Multiple Benchmark Tools and Input Files)
 
 ##### Prepare executables and parameters:
 
-Robin [prepares executables and parameters similarly to Scenario 2.](#a255)
+She prepares executables and parameters similar to
+[Benchmarking Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare multiple benchmark tools that reads from an input file:
 
-She [prepares a set of benchmark tools that reads from an input file similarly to Scenario 13.](#f0c5)
+She prepares a set of benchmark tools that reads from an input file similarly to
+[Manually Benchmarking Executable File with Benchmark Tool and Input File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-a-benchmark-tool-that-reads-from-an-input-file).
 
 ##### Prepare a benchmark script:
 
@@ -719,17 +768,19 @@ Robin writes a shell script to run the benchmark tools in multiple machines, gen
 
 ##### Benchmark the programs and record measurements:
 
-She [benchmarks the programs and record measurements similarly to scenario 7.](#0fd3)
+She benchmarks the programs and record measurements similarly to
+[Automatically Benchmarking Executable File with Input and Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#benchmark-the-programs-and-record-measurements-2).
 
 ##### Plot:
 
-She creates [plots similarly to Scenario 7](#dc03).
+She creates plots similarly to
+[Automatically Benchmarking Executable File with Input and Output File](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#plot-7).
 
 ### Scenario 19 (Same parameter values and Same measurement type(s))
 
 ##### Prepare output file from a previous run:
 
-Robin does any of the scenarios 0–18, store the measurements and parameters in a file, called *outfile*.
+Robin does any of the scenarios 0–18, stores the measurements and parameters in a file, called *outfile*.
 
 ##### Benchmark the programs and record measurements:
 
@@ -744,7 +795,7 @@ She creates different plots from *outfile*.
 
 ##### Prepare output file from a previous run:
 
-Robin does any of the scenarios 0–18, store the measurements and parameters in a file, called *outfile*.
+Robin does any of the scenarios 0–18, stores the measurements and parameters in a file, called *outfile*.
 
 ##### Benchmark the programs and record measurements:
 
@@ -759,11 +810,11 @@ She creates different plots from *outfile*.
 
 ##### Prepare output file from a previous run:
 
-Robin does any of the scenarios 0–18, store the measurements and parameters in a file, called *outfile*.
+Robin does any of the scenarios 0–18, stores the measurements and parameters in a file, called *outfile*.
 
 ##### Benchmark the programs and record measurements:
 
-She reads the *outfile*, reruns the benchmark with some additional parameter values, and gets new measurements. She stores the parameters and measurements (along with the additional ones) in the *outfile*. For example, for matrix multiplication, if she take matrix size 50, 100, 150 in a previous benchmark run, now, she runs the behnchmark with matrix size 50, 100, 150, 200, 250, 300.
+She reads the *outfile*, reruns the benchmark with some additional parameter values, and gets new measurements. She stores the parameters and measurements (along with the additional ones) in the *outfile*. For example, for matrix multiplication, if she take matrix size 50, 100, 150 in a previous benchmark run, now, she runs the benchmark with matrix size 50, 100, 150, 200, 250, 300.
 
 ##### Plot:
 
@@ -773,7 +824,7 @@ She creates different plots from *outfile*.
 
 ##### Prepare output file from a previous run:
 
-Robin does any of the scenarios 0–18, store the measurements and parameters in a file, called *outfile*.
+Robin does any of the scenarios 0–18, stores the measurements and parameters in a file, called *outfile*.
 
 ##### Benchmark the programs and record measurements:
 
@@ -788,7 +839,7 @@ She creates different plots from *outfile*.
 
 ##### Prepare output file from a previous run:
 
-Robin does any of the scenarios 0–18, store the measurements and parameters in a file, called *outfile*.
+Robin does any of the scenarios 0–18, stores the measurements and parameters in a file, called *outfile*.
 
 ##### Benchmark the programs and record measurements:
 
@@ -826,6 +877,8 @@ She reads the outfile and filters out only a subset of the data with a script. F
 ##### Plot:
 
 Lastly, she generates different charts by combining the values of the *new_params* and *new_measures*.
+
+![](./figs/flowchart-s24.jpg)
 
 **Disclaimer**: Robin is a fictitious person. Perfecto, Obsoleto, and Coolio are imaginary program names.
 
