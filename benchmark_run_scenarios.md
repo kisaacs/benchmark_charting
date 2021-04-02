@@ -892,16 +892,8 @@ Lastly, she generates different charts by combining the values of the *new_param
 
 ![](./figs/flowchart-s24.jpg)
 
-**Disclaimer**: Robin is a fictitious person. Perfecto, Obsoleto, and Coolio are imaginary program names.
+**Disclaimer**:
+- Scenarios are not exhaustive, only most common situations are listed here. 
+- Robin is a fictitious person.
+- Perfecto, Obsoleto, and Coolio are imaginary program names.
 
-**Scenario Keys**
-
-**User Action**: Manual, Automatic
-
-**Runnable**: Function, Library, Executable File, URL
-
-**Benchmark**: Benchmark script, Benchmark tool
-
-**Input Types**: File, Command line argument, Inline variables, System information, Environment Variables
-
-**Parameters and Measurements**: Same value, Additional value, Same type, Additional type, Subset of the type, Subset of the value
