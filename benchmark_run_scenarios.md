@@ -53,13 +53,13 @@ Table of Contents
 
 * [Scenario 24](#cec1)
 
-**Scenario 0 (Manual, Function)**
+#### Scenario 0 (Manual, Function)
 
-Prepare functions and parameters:
+##### Prepare functions and parameters:
 
 Let’s consider, for a specific task, a programmer, named Robin, wrote a cool new function in C++ programming language called Perfecto. She wants to measure its performance and compare that with two other similar functions — Obsoleto and Coolio — for the exact same task. Let’s consider again these functions take 3 parameters— param1, param2, param3. Robin wants to measure the execution time of these functions. For example, if the task is to compute matrix multiplication, then a parameter could be the matrix size.
 
-Prepare a benchmark script for functions:
+##### Prepare a benchmark script for functions:
 
 She writes a benchmark script, where she initializes the 3 parameters and passes them to the function “Perfecto” as parameters. She measures time before and after calling that function by using “clock()” function, and then takes the difference to measure the execution time. She prints out the measurement value in the standard output. She does the exact same steps with the other two functions Obsoleto and Coolio. These are summarized in the following code snippet.
 
@@ -97,7 +97,8 @@ In this scenario, with the benchmark script, she is measuring execution time wit
 
 Manually record measurements:
 
-Now, she writes another program *Record_All_Runs *in python, where she declares 6 arrays. Three of the arrays are for the parameters and three for the measurement values in 3 functions. Then, she adds the 3 parameter values along with the measurements into the respective arrays of the* Record_All_Runs *program by manually typing. For different runs of the benchmark script, she adds the values as an additional element of the arrays.
+Now, she writes another program *Record_All_Runs* in python, where she declares 6 arrays. Three of the arrays are for the parameters and three for the
+ measurement values in 3 functions. Then, she adds the 3 parameter values along with the measurements into the respective arrays of the *Record_All_Runs* program by manually typing. For different runs of the benchmark script, she adds the values as an additional element of the arrays.
 
     RUNS = 4
     param1 = [42, 24, 34, 43]
@@ -166,7 +167,8 @@ Let’s consider, for a specific task, Robin created a C++ executable file calle
 
 Benchmark the programs:
 
-Robin measures the running time using *time *command in shell to print out the measured time in standard output. Now, from a command line window, Robin runs each of the executable files separately with different parameters.
+Robin measures the running time using *time* command in shell to print out the measured time in standard output. Now, from a command line window, Robin runs
+ each of the executable files separately with different parameters.
 
     $ time -f "%R" ./perfecto param1 42 param2 3.14 param3 1.61
     0.033
@@ -224,7 +226,7 @@ Robin writes a benchmark script in python. Here she declares 3 arrays (as a list
 
 Benchmark the programs and record measurements:
 
-She executes the benchmark script. The *measurements *dictionary stores each measurement values for different parameters in *params*.
+She executes the benchmark script. The *measurements* dictionary stores each measurement values for different parameters in *params*.
 
 Plot:
 
@@ -335,7 +337,8 @@ Robin writes a benchmark script in python. Here she declares 3 arrays (as a list
 
 Benchmark the programs and record measurements:
 
-Robin executes the benchmark script. Then, she writes another program called “Record_All_Runs” in python, where she opens the *outfile *(using the “open” function of python), parse the dictionary (using “eval”) and stores that in a variable.
+Robin executes the benchmark script. Then, she writes another program called “Record_All_Runs” in python, where she opens the *outfile* (using the “open
+” function of python), parse the dictionary (using “eval”) and stores that in a variable.
 
     params_and_measures = eval(open('outfile', 'r').read())
 
@@ -383,14 +386,15 @@ Robin writes another program “Do_All_Runs” in python. Now, using “Popen”
 
 Benchmark the programs and record measurements:
 
-Robin executes the benchmark script. Then, she writes another program “Record_All_Runs” in python, where she opens the *outfile *and *infile *(using the “open” function of python), parse the dictionary (using “eval”) and stores that in respective variables.
+Robin executes the benchmark script. Then, she writes another program “Record_All_Runs” in python, where she opens the *outfile* and *infile* (using the
+ “open” function of python), parse the dictionary (using “eval”) and stores that in respective variables.
 
     params = eval(open('infile', 'r').read())
     measures = eval(open('outfile', 'r').read())
 
 Plot:
 
-Lastly, she generates different charts by combining the values of the *params *and* measures*.
+Lastly, she generates different charts by combining the values of the *params* and *measures*.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*aL188QsH8mx7doULPuShQw.jpeg)
 
@@ -402,7 +406,8 @@ Robin [prepares executables that reads parameters from an input file similarly t
 
 Prepare a benchmark script for executables:
 
-Robin writes another program “Do_All_Runs” in python. Here she reads the input parameters from *infile *and declares 3 for the measurement values (as a dictionary with each executable name as the key). Then using “Popen” with “PIPE”, she runs the executable, reads the output from the PIPE and assigns measurements to respective list of each executable.
+Robin writes another program “Do_All_Runs” in python. Here she reads the input parameters from *infile* and declares 3 for the measurement values (as a
+ dictionary with each executable name as the key). Then using “Popen” with “PIPE”, she runs the executable, reads the output from the PIPE and assigns measurements to respective list of each executable.
 
     RUNS = 3
     program_list = ["perfecto", "obosoleto", "coolio"]
@@ -427,11 +432,11 @@ Robin writes another program “Do_All_Runs” in python. Here she reads the inp
 
 Benchmark the program and record measurements:
 
-She runs the “Do_All_Runs” script times and stores the measurements along with parameters into variables *measures *and *params *respectively.
+She runs the “Do_All_Runs” script times and stores the measurements along with parameters into variables *measures* and *params* respectively.
 
 Plot:
 
-By combining the variables *params *and *measures*, Robin generates different charts.
+By combining the variables *params* and *measures*, Robin generates different charts.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*UfXx4TpF-IWSstIjDz5jvg.jpeg)
 
@@ -443,7 +448,8 @@ Robin [prepares executables that reads parameters from an input file similarly t
 
 Benchmark the programs:
 
-Robin measures the running time using *time *command in shell to print out the measured time in standard output. Now, from a command line window, Robin runs each of the executable files separately with input file *infile*.
+Robin measures the running time using *time* command in shell to print out the measured time in standard output. Now, from a command line window, Robin runs
+ each of the executable files separately with input file *infile*.
 
     $ time -f "%R" ./perfecto -i infile
     0.033
@@ -496,7 +502,10 @@ Robin interacts with the webpage to run the executable with different parameters
 
 Manually record measurements:
 
-She manually reads the inspection log file, parses specific parameters and measurement values. Now, she writes another program *Record_All_Runs *in python, where she declares 6 arrays. Three of the arrays are for the parameters and three for the measurement values in 3 functions. Then, she adds the 3 parameter values along with the measurements into the respective arrays of the* Record_All_Runs *program by manually typing. For different runs of the benchmark script, she adds the values as an additional element of the arrays.
+She manually reads the inspection log file, parses specific parameters and measurement values. Now, she writes another program *Record_All_Runs* in python
+, where she declares 6 arrays. Three of the arrays are for the parameters and three for the measurement values in 3 functions. Then, she adds the 3 parameter
+ values along with the measurements into the respective arrays of the *Record_All_Runs* program by manually typing. For different runs of the benchmark
+  script, she adds the values as an additional element of the arrays.
 
     RUNS = 4
     param1 = [42, 24, 34, 43]
@@ -568,7 +577,7 @@ Prepare a benchmark script for benchmark tool:
 
 Robin writes another program “Do_All_Runs” in python, where she declares 6 arrays. Three of the arrays are for the parameters and 2 for the measurement values. She opens the configuration file using “open” function, reads the parameters, and update the respective array. Then she runs the benchmark program using “Popepn” and with “PIPE” she reads out the output of the program. She parses the output and updates respective measurement array.
 
-For example, if she uses [*blazemark ](https://bitbucket.org/blaze-lib/blaze/wiki/Blazemark)*for benchmarking, its output should look like this:
+For example, if she uses [*blazemark*](https://bitbucket.org/blaze-lib/blaze/wiki/Blazemark) for benchmarking, its output should look like this:
 
       N=50, steps=4966379
          Blaze       = 1        (2.29648)
@@ -609,14 +618,15 @@ From a command line window, she runs the benchmark tool executable and redirects
 
 Record measurements:
 
-She writes another program “Record_All_Runs” in python, where she opens the *outfile *and *infile *(using the “open” function of python), parse the dictionary (using “eval”) and stores that in respective variables.
+She writes another program “Record_All_Runs” in python, where she opens the *outfile* and *infile* (using the “open” function of python), parse the
+ dictionary (using “eval”) and stores that in respective variables.
 
     params = eval(open('infile', 'r').read())
     measures = eval(open('outfile', 'r').read())
 
 Plot:
 
-Lastly, she generates different charts by combining the values of the *params *and* measures*.
+Lastly, she generates different charts by combining the values of the *params* and *measures*.
 
 **Scenario 16 (Multiple machines, Manual)**
 
@@ -634,14 +644,16 @@ Robin log-in to remote machine and from a command line window, she runs the benc
 
 Move the input and outfile to local machine:
 
-Robin copies the input configuration and output files from remote machines, moves them to a local machine, combines them and creates a single input configuration and output file. Then, she writes another program “Parser” in python, where she opens the *outfile *and *infile *(using the “open” function of python), parse the dictionary (using “eval”) and stores that in respective variables.
+Robin copies the input configuration and output files from remote machines, moves them to a local machine, combines them and creates a single input
+ configuration and output file. Then, she writes another program “Parser” in python, where she opens the *outfile* and *infile* (using the “open” function
+  of python), parse the dictionary (using “eval”) and stores that in respective variables.
 
     params = eval(open('infile', 'r').read())
     measures = eval(open('outfile', 'r').read())
 
 Plot:
 
-Lastly, she generates different charts by combining the values of the *params *and* measures*.
+Lastly, she generates different charts by combining the values of the *params* and *measures*.
 
 **Scenario 17 (Multiple machines, Automatic)**
 
@@ -721,7 +733,8 @@ Robin does any of the scenarios 0–18, store the measurements and parameters in
 
 Benchmark the programs and record measurements:
 
-She reads the *outfile *file and reruns the benchmark with the exact same parameters and generates new values for the same measurement type(s). She stores the new measurement values in the *outfile*.
+She reads the *outfile* file and reruns the benchmark with the exact same parameters and generates new values for the same measurement type(s). She stores
+ the new measurement values in the *outfile*.
 
 Plot:
 
@@ -735,7 +748,8 @@ Robin does any of the scenarios 0–18, store the measurements and parameters in
 
 Benchmark the programs and record measurements:
 
-She reads the *outfile *and reruns the benchmark with the exact same parameters. This time Robin measures a different thing. For example, for the matrix multiplication program, previously she measured the execution time. Now, she could measure CPU cycles in MFLOPS. Then, She stores the values for the new measurement type(s) into the *outfile*.
+She reads the *outfile* and reruns the benchmark with the exact same parameters. This time Robin measures a different thing. For example, for the matrix
+ multiplication program, previously she measured the execution time. Now, she could measure CPU cycles in MFLOPS. Then, She stores the values for the new measurement type(s) into the *outfile*.
 
 Plot:
 
@@ -763,7 +777,8 @@ Robin does any of the scenarios 0–18, store the measurements and parameters in
 
 Benchmark the programs and record measurements:
 
-She reads the *outfile, *reruns the benchmark with the some additional new parameter types. She takes the same exact measurement as before and stores the parameters (along with the additional ones) and measurements in the *outfile*. For example, previously, if she considered 3 parameters as param1, param2, param3. Now, she considers additional 2 parameters — param4 and param5.
+She reads the *outfile*, reruns the benchmark with the some additional new parameter types. She takes the same exact measurement as before and stores the
+ parameters (along with the additional ones) and measurements in the *outfile*. For example, previously, if she considered 3 parameters as param1, param2, param3. Now, she considers additional 2 parameters — param4 and param5.
 
 Plot:
 
@@ -777,7 +792,8 @@ Robin does any of the scenarios 0–18, store the measurements and parameters in
 
 Benchmark the programs and record measurements:
 
-She reads the *outfile *and reruns the benchmark with the some additional new parameter types. She takes the same exact measurement as before with an additional measurement type. Then she stores all the parameters and measurements in the *outfile*. For example, if for a previous benchmark run, she measured only execution time for param1, param2, param3. Now, she wants to measure execution time and CPU cycle for param1, param2, param3, param4, param5.
+She reads the *outfile* and reruns the benchmark with the some additional new parameter types. She takes the same exact measurement as before with an
+ additional measurement type. Then she stores all the parameters and measurements in the *outfile*. For example, if for a previous benchmark run, she measured only execution time for param1, param2, param3. Now, she wants to measure execution time and CPU cycle for param1, param2, param3, param4, param5.
 
 Plot:
 
@@ -809,7 +825,7 @@ She reads the outfile and filters out only a subset of the data with a script. F
 
 Plot:
 
-Lastly, she generates different charts by combining the values of the *new_params *and* new_measures*.
+Lastly, she generates different charts by combining the values of the *new_params* and *new_measures*.
 
 **Disclaimer**: Robin is a fictitious person. Perfecto, Obsoleto, and Coolio are imaginary program names.
 
