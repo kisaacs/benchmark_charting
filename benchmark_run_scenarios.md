@@ -1,57 +1,69 @@
 
 # Benchmark Run Scenarios
 
+In order to validate certain concepts, data analysts often need to compare performance of their developed programs. Data analysts could develop their program
+ in the form of a
+* Function
+* Library
+* Executable file
+
+Typically, they compare their programs with similar other state-of-the-art programs. To compare performance, they might utilize a benchmark tool or write custom
+ benchmark script to automate the benchmark process. During the benchmark, they modify a set of parameters and estimate some measurement. After conducting a
+  benchmark run, Data analyst may want to record parameters from the following sources:  
+ 
+ * Formatted File
+   1. Source code (Variable value, object property, comment or default value in the markup)
+   2. Fixed arbitrary metadata (CSV, JSON, XML, etc.)
+   3. Adhoc arbitrary metadata
+   4. Setting metadata of any 3rd party tool (like Jupyter Notebook)
+   5. Configuration file
+   6. Predefined database (mysql, sqlite, postgre sql, etc.)
+   7. Log data
+   8. Parameters from previous old benchmark run
+   9. Document editor files (PDF, MSDoc, Google doc, etc.)
+ * Command Line Arguments (CLA)
+ * Platform Specific Parameters (PSP)
+   1. Environment Variables
+   2. Hardware Information
+   3. System Information
+
+In this document, a set of most common scenarios for benchmark run has been presented in a step by step fashion. A generic model of the scenarios also has been
+ presented as a flowchart in the following picture.
+
+![](./figs/flowchart.jpg)
+
 Table of Contents
-
-* [Scenario 0](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-benchmarking-function-manually)
-
-* [Scenario 1](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-1-benchmarking-library-manually)
-
-* [Scenario 2](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-2-benchmarking-executable-file-manually)
-
-* [Scenario 3](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-3-benchmarking-executable-file-automatically)
-
-* [Scenario 4](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-4-manually-benchmarking-executable-file-with-output-file)
-
-* [Scenario 5](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-5-manually-benchmarking-executable-file-with-output-file-parser)
-
-* [Scenario 6](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-6-automatically-benchmarking-executable-file-with-output-file)
-
-* [Scenario 7](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-7-automatically-benchmarking-executable-file-with-input-and-output-file)
-
-* [Scenario 8](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-8-automatically-benchmarking-executable-file-with-input-file)
-
-* [Scenario 9](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-9-manually-benchmarking-executable-file-with-input-file)
-
-* [Scenario 10](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-10-manually-benchmarking-executable-url)
-
-* [Scenario 11](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-11-manually-benchmarking-executable-url-with-output-file)
-
-* [Scenario 12](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-12-manually-benchmarking-executable-file-with-benchmark-tool)
-
-* [Scenario 13](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-13-manually-benchmarking-executable-file-with-benchmark-tool-and-input-file)
-
-* [Scenario 14](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-14-automatically-benchmarking-executable-file-with-benchmark-tool-and-input-file)
-
-* [Scenario 15](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-15-automatically-benchmarking-executable-file-with-benchmark-tool-input-and-output-file)
-
-* [Scenario 16](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-16-manually-benchmark-in-multiple-machines)
-
-* [Scenario 17](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-17-automatically-benchmark-in-multiple-machines)
-
-* [Scenario 18](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-18-automatically-benchmark-in-multiple-machines-with-multiple-benchmark-tools-and-input-files)
-
-* [Scenario 19](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-19-same-parameter-values-and-same-measurement-types)
-
-* [Scenario 20](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-20-same-parameter-values-and-new-measurement-types)
-
-* [Scenario 21](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-21-additional-parameter-values-and-same-measurement-types)
-
-* [Scenario 22](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-22-new-parameter-types-and-same-measurement-types)
-
-* [Scenario 23](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-23-new-parameter-and-measurement-types)
-
-* [Scenario 24](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-24-subset-of-the-data)
+* Basic
+  * [Scenario 0 (Benchmarking Function Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-benchmarking-function-manually)
+  * [Scenario 1 (Benchmarking Library Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-1-benchmarking-library-manually)
+* Executable File
+  * [Scenario 2 (Benchmarking Executable File Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-2-benchmarking-executable-file-manually)
+  * [Scenario 3 (Benchmarking Executable File Automatically)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-3-benchmarking-executable-file-automatically)
+  * [Scenario 4 (Manually Benchmarking Executable File with Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-4-manually-benchmarking-executable-file-with-output-file)
+  * [Scenario 5 (Manually Benchmarking Executable File with Output File Parser)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-5-manually-benchmarking-executable-file-with-output-file-parser)
+  * [Scenario 6 (Automatically Benchmarking Executable File with Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-6-automatically-benchmarking-executable-file-with-output-file)
+  * [Scenario 7 (Automatically Benchmarking Executable File with Input and Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-7-automatically-benchmarking-executable-file-with-input-and-output-file)
+  * [Scenario 8 (Automatically Benchmarking Executable File with Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-8-automatically-benchmarking-executable-file-with-input-file)
+  * [Scenario 9 (Manually Benchmarking Executable File with Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-9-manually-benchmarking-executable-file-with-input-file)
+* URL
+  * [Scenario 10 (Manually Benchmarking Executable URL)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-10-manually-benchmarking-executable-url)
+  * [Scenario 11 (Manually Benchmarking Executable URL with Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-11-manually-benchmarking-executable-url-with-output-file)
+* Benchmark Tool
+  * [Scenario 12 (Manually Benchmarking Executable File with Benchmark Tool)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-12-manually-benchmarking-executable-file-with-benchmark-tool)
+  * [Scenario 13 (Manually Benchmarking Executable File with Benchmark Tool and Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-13-manually-benchmarking-executable-file-with-benchmark-tool-and-input-file)
+  * [Scenario 14 (Automatically Benchmarking Executable File with Benchmark Tool and Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-14-automatically-benchmarking-executable-file-with-benchmark-tool-and-input-file)
+  * [Scenario 15 (Automatically Benchmarking Executable File with Benchmark Tool, Input and Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-15-automatically-benchmarking-executable-file-with-benchmark-tool-input-and-output-file)
+* Multiple Machines
+  * [Scenario 16 (Manually Benchmark in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-16-manually-benchmark-in-multiple-machines)
+  * [Scenario 17 (Automatically Benchmark in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-17-automatically-benchmark-in-multiple-machines)
+  * [Scenario 18 (Automatically Benchmark in Multiple Machines with Multiple Benchmark Tools and Input Files)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-18-automatically-benchmark-in-multiple-machines-with-multiple-benchmark-tools-and-input-files)
+* More Parameters and Measurements
+  * [Scenario 19 (Same parameter values and Same measurement type(s))](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-19-same-parameter-values-and-same-measurement-types)
+  * [Scenario 20 (Same parameter values and new measurement type(s))](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-20-same-parameter-values-and-new-measurement-types)
+  * [Scenario 21 (Additional parameter values and same measurement type(s))](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-21-additional-parameter-values-and-same-measurement-types)
+  * [Scenario 22 (New parameter type(s) and same measurement type(s))](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-22-new-parameter-types-and-same-measurement-types)
+  * [Scenario 23 (New parameter and measurement type(s))](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-23-new-parameter-and-measurement-types)
+  * [Scenario 24 (Subset of the data)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-24-subset-of-the-data)
 
 ### Scenario 0 (Benchmarking Function Manually)
 
