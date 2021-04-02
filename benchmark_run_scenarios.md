@@ -890,7 +890,7 @@ She reads the outfile and filters out only a subset of the data with a script. F
 
 Lastly, she generates different charts by combining the values of the *new_params* and *new_measures*.
 
-![](./figs/flowchart-s24.jpg)
+[Click here to see this scenario highlighted in the flowchart](./figs/flowchart-s24.jpg)
 
 **Disclaimer**:
 - Scenarios are not exhaustive, only most common situations are listed here. 
