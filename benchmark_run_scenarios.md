@@ -1,36 +1,77 @@
 
 # Benchmark Run Scenarios
 
-In order to validate certain concepts, data analysts often need to compare performance of their developed programs. Data analysts could develop their program
- in the form of a
+These scenarios describe how data is collected to perform performance comparisons. We first discuss the choices is collecting performance data. We then present a flow chart of the process, using these choices. Finally, we describe a subset of paths through the flow chart, as example scenarios.
+
+  * [Choices in collecting performance data](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Choices-in-collecting-performance-data)
+  * [Model of Performance Data Collection](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Model-of-Performance-Data-Collection)
+  * [Example Scenarios](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Example-Scenarios)
+
+### Choices in collecting performance data
+
+We divide the choices in collection to the comparision target, the method of collection, and the data collected.
+
+#### What is being compared (Target)
+
+The target of comparison could be at different granularities, within the same program external to it, such as:
+
 * Function
 * Library
 * Executable file
 
-Typically, they compare their programs with similar other state-of-the-art programs. To compare performance, they might utilize a benchmark tool or write custom
- benchmark script to automate the benchmark process. During the benchmark, they modify a set of parameters and estimate some measurement. After conducting a
-  benchmark run, Data analyst may want to record parameters from the following sources:  
+#### How to compare (Mechanism)
+
+To compare performance, one might utilize a benchmark tool or write custom script to automate the performance gathering process. The tool or script can modify a set of parameters used to execute the target. Thus, the choices are:
+
+* Manually running each configuration
+* Writing a script to change parameters and run each configuration
+* Running a benchmark tool/program
+
+**please do not use benchmark for all performance data collection. it will not be understood**
+
+#### Parameters and their sources (Data)
  
  * Formatted File
    1. Source code (Variable value, object property, comment or default value in the markup)
-   2. Fixed arbitrary metadata (CSV, JSON, XML, etc.)
-   3. Adhoc arbitrary metadata
-   4. Setting metadata of any 3rd party tool (like Jupyter Notebook)
+   2. Fixed arbitrary metadata (CSV, JSON, XML, etc.) **is this input? I don't understand**
+   3. Adhoc arbitrary metadata, **example?**
+   4. Setting metadata of any 3rd party tool (like Jupyter Notebook), **What is the metadata here?**
    5. Configuration file
-   6. Predefined database (mysql, sqlite, postgre sql, etc.)
-   7. Log data
-   8. Parameters from previous old benchmark run
-   9. Document editor files (PDF, MSDoc, Google doc, etc.)
+   6. Predefined database (mysql, sqlite, postgre sql, etc.) **what is the meta data here?**
+   7. Log data **what does this mean?**
+   8. Indication parameters are the same as a previous run
+   9. Document editor files (PDF, MSDoc, Google doc, etc.) **what is this?**
  * Command Line Arguments (CLA)
  * Platform Specific Parameters (PSP)
    1. Environment Variables
    2. Hardware Information
    3. System Information
 
-In this document, a set of most common scenarios for benchmark run has been presented in a step by step fashion. A generic model of the scenarios also has been
- presented as a flowchart in the following picture.
+### Model of Performance Data Collection
+
+We model performance data collection as follows:
+
+A. Execution 
+  1. Prepare targets (programs) and the configurations in which they vary (e.g., problem size, number of processes).
+  2. Prepare performance collection mechanism
+  3. Run the mechanism
+  4. Data is generated and output
+B. Collection of Data & Metadata
+  5. Collate in-memory data
+  6. Collate output file data
+  7. Collate command line arguments used
+  8. Collate platform specific data
+  9. Collate URL request data
+  10. Merge collated data to single file/directory/database
+C. Analysis
+  11. Filter/plot/run other tools
+
+This flowchart captures choices implicit in the above model
 
 ![](./figs/flowchart.jpg)
+
+
+### Example Scenarios
 
 Table of Contents
 * Basic
