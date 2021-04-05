@@ -74,10 +74,10 @@ This flowchart captures choices implicit in the above model
 ### Example Scenarios
 
 Table of Contents
-* Basic
+* Simple Manual Collection, Single File
   * [Scenario 0 (Benchmarking Function Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-benchmarking-function-manually)
   * [Scenario 1 (Benchmarking Library Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-1-benchmarking-library-manually)
-* Executable File
+* Comparing Executables
   * [Scenario 2 (Benchmarking Executable File Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-2-benchmarking-executable-file-manually)
   * [Scenario 3 (Benchmarking Executable File Automatically)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-3-benchmarking-executable-file-automatically)
   * [Scenario 4 (Manually Benchmarking Executable File with Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-4-manually-benchmarking-executable-file-with-output-file)
@@ -86,15 +86,15 @@ Table of Contents
   * [Scenario 7 (Automatically Benchmarking Executable File with Input and Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-7-automatically-benchmarking-executable-file-with-input-and-output-file)
   * [Scenario 8 (Automatically Benchmarking Executable File with Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-8-automatically-benchmarking-executable-file-with-input-file)
   * [Scenario 9 (Manually Benchmarking Executable File with Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-9-manually-benchmarking-executable-file-with-input-file)
-* URL
+* Data Obtained Through URL
   * [Scenario 10 (Manually Benchmarking Executable URL)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-10-manually-benchmarking-executable-url)
   * [Scenario 11 (Manually Benchmarking Executable URL with Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-11-manually-benchmarking-executable-url-with-output-file)
-* Benchmark Tool
+* Using an Existing Benchmarking Tool
   * [Scenario 12 (Manually Benchmarking Executable File with Benchmark Tool)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-12-manually-benchmarking-executable-file-with-benchmark-tool)
   * [Scenario 13 (Manually Benchmarking Executable File with Benchmark Tool and Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-13-manually-benchmarking-executable-file-with-benchmark-tool-and-input-file)
   * [Scenario 14 (Automatically Benchmarking Executable File with Benchmark Tool and Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-14-automatically-benchmarking-executable-file-with-benchmark-tool-and-input-file)
   * [Scenario 15 (Automatically Benchmarking Executable File with Benchmark Tool, Input and Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-15-automatically-benchmarking-executable-file-with-benchmark-tool-input-and-output-file)
-* Multiple Machines
+* Collecting Data from Multiple Machines
   * [Scenario 16 (Manually Benchmark in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-16-manually-benchmark-in-multiple-machines)
   * [Scenario 17 (Automatically Benchmark in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-17-automatically-benchmark-in-multiple-machines)
   * [Scenario 18 (Automatically Benchmark in Multiple Machines with Multiple Benchmark Tools and Input Files)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-18-automatically-benchmark-in-multiple-machines-with-multiple-benchmark-tools-and-input-files)
@@ -110,11 +110,11 @@ Table of Contents
 
 ##### Prepare functions and parameters:
 
-Let’s consider, for a specific task, a programmer, named Robin, wrote a cool new function in C++ programming language called Perfecto. She wants to measure its performance and compare that with two other similar functions — Obsoleto and Coolio — for the exact same task. Let’s consider again these functions take 3 parameters— param1, param2, param3. Robin wants to measure the execution time of these functions. For example, if the task is to compute matrix multiplication, then a parameter could be the matrix size.
+Let’s consider, for a specific task, a programmer, named Robin, wrote a cool new function called `Perfecto` into her C++ program. She wants to measure its performance and compare that with two other similar functions — `Obsoleto` and `Coolio` — for the exact same task. Let’s consider again these functions take 3 parameters— param1, param2, param3. Robin wants to measure the execution time all three functions given the parameters. For example, if the task is to compute matrix multiplication, then a parameter could be the matrix size.
 
-##### Prepare a benchmark script for functions:
+##### Write a measurement script for functions:
 
-She writes a benchmark script, where she initializes the 3 parameters and passes them to the function “Perfecto” as parameters. She measures time before and after calling that function by using “clock()” function, and then takes the difference to measure the execution time. She prints out the measurement value in the standard output. She does the exact same steps with the other two functions Obsoleto and Coolio. These are summarized in the following code snippet.
+Robin writes a performance measurement script. In the script, she initializes the 3 parameters and passes them to the function `Perfecto` as parameters. She measures time before and after calling that function by using the `clock()` function, and then takes the difference to measure the execution time. She prints out the measurement value to standard output. She does the exact same steps with the other two functions `Obsoleto` and `Coolio`. These are summarized in the following code snippet.
 
     #include <ctime>
     void Perfecto(double a, double b, double c) {
@@ -144,11 +144,11 @@ She writes a benchmark script, where she initializes the 3 parameters and passes
     obsoleto_time = ((double) (time3 – time2) / CLOCKS_PER_SEC;
     coolio_time = ((double) (time4 – time3) / CLOCKS_PER_SEC;
 
-##### Benchmark the programs:
+##### Manually execute the measurement script with different parameters:
 
-In this scenario, with the benchmark script, she is measuring execution time with the 3 parameters for each of the functions. She opens the benchmark script, manually changes the 3 parameters, and then runs the script to get the measurement. She does this several times and calculates multiple measurements for different parameter values.
+In this scenario, with the performance measuremennt script, she is measuring execution time with the 3 parameters for each of the functions. She opens the benchmark script, manually changes the 3 parameters, and then runs the script to get the measurement. She does this several times and calculates multiple measurements for different parameter values.
 
-##### Manually record measurements:
+##### Manually collate measurements:
 
 Now, she writes another program *Record_All_Runs* in python, where she declares 6 arrays. Three of the arrays are for the parameters and three for the
  measurement values in 3 functions. Then, she adds the 3 parameter values along with the measurements into the respective arrays of the *Record_All_Runs* program by manually typing. For different runs of the benchmark script, she adds the values as an additional element of the arrays.
