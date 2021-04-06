@@ -1,16 +1,16 @@
 
 # Benchmark Run Scenarios
 
+This flowchart captures choices implicit in the model described later in this document:
+
+![](./figs/flowchart.jpg)
+
 These scenarios describe how data is collected to perform performance comparisons. We first discuss the choices in collecting performance data. We then
  present a flow chart of the process, using these choices. Finally, we describe a subset of paths through the flow chart, as example scenarios.
 
   * [Choices in collecting performance data](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Choices-in-collecting-performance-data)
   * [Model of Performance Data Collection](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Model-of-Performance-Data-Collection)
   * [Example Scenarios](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Example-Scenarios)
-
-This flowchart captures choices implicit in the model described later in this document:
-
-![](./figs/flowchart.jpg)
 
 ### Choices in collecting performance data
 
@@ -35,17 +35,16 @@ To compare performance, one might utilize a performance measurement tool or writ
 
 #### Parameters and their sources (Data)
  
- * Formatted File
+ * Formatted File - various files we can parse for data or metadate of interest
    1. Source code (Variable value, object property, comment or default value in the markup)
    2. File with fixed arbitrary metadata (CSV, JSON, XML, etc.)
    3. File with adhoc arbitrary metadata, (python pickle file)
-   4. Metadata of any 3rd party tool (cell metadata of Jupyter Notebook), **What is the metadata here? - cell metadata of jupyter notebook**
+   4. Metadata of any 3rd party tool (cell metadata of Jupyter Notebook),
    5. Configuration file
-   6. Predefined database file (mysql, sqlite, postgre sql, etc.) **what is the meta data here? - parameters stored in the table, table metadata, etc.**
-   7. Log data file **what does this mean? - web browser log, server log, benchmark tool log, etc.**
-   8. Indication parameters are the same as a previous run **I think this item is unnecessary, since here, we are talking about just file only.**
-   9. Document editor files (PDF, MSDoc, Google doc, etc.) **what is this? - a very old run which were reported in the form of PDF, re-executing the
-    performance analysis with the parameters reported in that document**
+   6. Predefined database file (mysql, sqlite, postgre sql, etc.), both parameters stored therein and information about the db 
+   7. Log data file, such as server logs, error logs, and tool logs 
+   8. Parameters stored from a previous run 
+   9. Document editor files (PDF, MSDoc, Google doc, etc.), for example, if parameters come from an old report
  * Command Line Arguments (CLA)
  * Platform Specific Parameters (PSP)
    1. Environment Variables
