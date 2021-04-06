@@ -1,16 +1,16 @@
 
 # Benchmark Run Scenarios
 
-This flowchart captures choices implicit in the model described later in this document:
-
-![](./figs/flowchart.jpg)
-
 These scenarios describe how data is collected to perform performance comparisons. We first discuss the choices in collecting performance data. We then
  present a flow chart of the process, using these choices. Finally, we describe a subset of paths through the flow chart, as example scenarios.
 
   * [Choices in collecting performance data](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Choices-in-collecting-performance-data)
   * [Model of Performance Data Collection](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Model-of-Performance-Data-Collection)
   * [Example Scenarios](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Example-Scenarios)
+
+This flowchart captures choices implicit in the model described later in this document:
+
+![](./figs/flowchart.jpg)
 
 ### Choices in collecting performance data
 
