@@ -1,16 +1,16 @@
 
 # Benchmark Run Scenarios
 
-This flowchart captures choices implicit in the model described later in this document:
-
-![](./figs/flowchart.jpg)
-
 These scenarios describe how data is collected to perform performance comparisons. We first discuss the choices in collecting performance data. We then
  present a flow chart of the process, using these choices. Finally, we describe a subset of paths through the flow chart, as example scenarios.
 
   * [Choices in collecting performance data](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Choices-in-collecting-performance-data)
   * [Model of Performance Data Collection](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Model-of-Performance-Data-Collection)
   * [Example Scenarios](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#Example-Scenarios)
+
+This flowchart captures choices implicit in the model described later in this document:
+
+![](./figs/flowchart.jpg)
 
 ### Choices in collecting performance data
 
@@ -292,11 +292,6 @@ Robin writes a performance measurement script in python. Here she declares 3 arr
 ##### Run performance measurement script and record measurements:
 
 She executes the performance measurement script. The *measurements* dictionary stores each measurement values for different parameters in *params* variable.
-
-**I don't understand how they are stored or what *params* is here. -- My idea for this scenario was that, the values are being stored within the program as a
- variable (not printing in the standard output neither in a specific file).**
-
-**Maybe this title is "Run performance measurement scipt to create results file" if that's what's happening? - its not storing in a file**
  
 ##### Plot:
 
