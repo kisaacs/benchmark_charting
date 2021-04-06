@@ -169,11 +169,13 @@ Lastly, the 6 arrays are then processed into charts.
 
 ##### Prepare libraries and parameters:
 
-Let’s consider, for a specific task, Robin created a C++ library called PerfectoLib. She wants to measure its performance and compare that with two other similar libraries — ObsoletoLib and CoolioLib — for the exact same task. Let’s consider that for that task she modifies 3 parameters and takes the measurement. For example, if the task is to do matrix multiplication, Robin might want to measure execution time for different matrix sizes (parameters).
+Robin creates a C++ library called `PerfectoLib`. She wants to measure its performance and compare that with two other similar libraries — `ObsoletoLib` and `CoolioLib` — for the exact same task. Let’s consider that for that task she modifies 3 parameters and takes the measurement. For example, if the task is to do matrix multiplication, Robin might want to measure execution time for different matrix sizes (parameters).
 
 ##### Prepare a benchmark script for libraries:
 
-She writes a benchmark script, where she initializes the 3 parameters and passes them to the library. Parameters may be passed as function arguments or setting library-state through a library setter method. Then, she measures the current time before and after calling the appropriate function of each library, and then takes the difference to measure the execution time. In this exact way, she also measures CPU cycle rate with a system call. She prints out the measurement values in the standard output. She does the exact same steps with the other two libraries ObsoletoLib and CoolioLib.
+She writes a performance measurement script, where she initializes the 3 parameters and passes them to the library. Parameters may be passed as function arguments or setting library-state through a library setter method. Then, she measures the current time before and after calling the appropriate function of each library, and then takes the difference to measure the execution time. In this exact way, she also measures CPU cycle rate with a system call. She prints out the measurement values in the standard output. She does the exact same steps with the other two libraries `ObsoletoLib` and `CoolioLib`.
+
+**Maybe the subheading should note that the script is printing to standard out? Given the flow chart, isn't that important?**
 
     #include <ctime>
     #include “PerfectoLib.cpp”
@@ -200,10 +202,14 @@ She writes a benchmark script, where she initializes the 3 parameters and passes
 
 ##### Benchmark the programs:
 
+
 She benchmarks the programs with different parameters similar to
 [Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#benchmark-the-programs).
 
 ##### Manually record measurements:
+
+
+**I think in addition to the scenario name, if the subheader name is specific enough, it should be listed too. For example [Benchmarking Function Manually - Manually Record Measurements] as the title.**
 
 She manually records measurements similar to 
 [Benchmarking Function Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#manually-record-measurements).
@@ -219,9 +225,11 @@ She creates plots similar to
 
 ##### Prepare executables and parameters:
 
-Let’s consider, for a specific task, Robin created a C++ executable file called Perfecto. She wants to measure its performance and compare that with two other similar programs — Obsoleto and Coolio — for the exact same task. Both programs have their respective executable file. Let’s consider that for that task, it requires 3 parameters. For example, if the task is to do matrix multiplication, Robin might want the measurements for different matrix sizes (parameters). The executable files take the 3 parameters as command line arguments.
+Robin creates a C++ executable file called `Perfecto`. She wants to measure its performance and compare that with two other similar programs — `Obsoleto` and `Coolio` — for the exact same task. Both programs have their respective executable file. Let’s consider that for that task, it requires 3 parameters. For example, if the task is to do matrix multiplication, Robin might want the measurements for different matrix sizes (parameters). The executable files take the 3 parameters as command line arguments.
 
 ##### Benchmark the programs:
+
+**Maybe this one should be called "Execute each program with time command" to be more specific.**
 
 Robin measures the running time using *time* command in shell to print out the measured time in standard output. Now, from a command line window, Robin runs
  each of the executable files separately with different parameters.
@@ -254,7 +262,9 @@ She prepares executables and parameters similar to
 
 ##### Prepare a benchmark script for executables:
 
-Robin writes a benchmark script in python. Here she declares 3 arrays (as a list) for the parameters and 3 for the measurement values (as a dictionary for each executable). She initializes the parameter arrays with different values. Then using “Popen” with “PIPE”, she runs the executable and reads the output from the PIPE and assigns measurements to respective list of each executable.
+**This could be called something like "Write performance measurement script to run executables and collect data". I think that's more specific than 'Prepare a benchmark script for executables.'**
+
+Robin writes a benchmark script in python. Here she declares 3 arrays (as a list) for the parameters and 3 for the measurement values (as a dictionary for each executable). She initializes the parameter arrays with different values. Then using `Popen` with `PIPE`, she runs the executable and reads the output from the `PIPE` and assigns measurements to respective list of each executable.
 
     RUNS = 3
     program_list = ["./perfecto", "./obosoleto", "./coolio"]
@@ -286,6 +296,10 @@ Robin writes a benchmark script in python. Here she declares 3 arrays (as a list
 ##### Benchmark the programs and record measurements:
 
 She executes the benchmark script. The *measurements* dictionary stores each measurement values for different parameters in *params*.
+
+**I don't understand how they are stored or what *params* is here.**
+
+**Maybe this title is "Run performance measurement scipt to create results file" if that's what's happening?**
 
 ##### Plot:
 
