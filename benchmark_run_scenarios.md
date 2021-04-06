@@ -78,8 +78,7 @@ This flowchart captures choices implicit in the above model
 
 Table of Contents
 * Simple Manual Collection, Single File
-  * [Scenario 0 (Analyse Performance of Function Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario
-  -0-analyse-performance-of-function-manually)
+  * [Scenario 0 (Analyse Performance of Function Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-0-analyse-performance-of-function-manually)
   * [Scenario 1 (Analyse Performance of Library Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-1-analyse-performance-of-library-manually)
 * Comparing Executables
   * [Scenario 2 (Analyse Performance of Executable File Manually)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-2-analyse-performance-of-executable-file-manually)
@@ -97,10 +96,10 @@ Table of Contents
   * [Scenario 12 (Manually Analyse Performance of Executable File with Performance Measurement Tool)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-12-manually-analyse-performance-of-executable-file-with-performance-measurement-tool)
   * [Scenario 13 (Manually Analyse Performance of Executable File with Performance Measurement Tool and Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-13-manually-analyse-performance-of-executable-file-with-performance-measurement-tool-and-input-file)
   * [Scenario 14 (Automatically Analyse Performance of Executable File with Performance Measurement Tool and Input File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-14-automatically-analyse-performance-of-executable-file-with-performance-measurement-tool-and-input-file)
-  * [Scenario 15 (Automatically Analyse Performance of Executable File with Performance Measurement Tool, Input and Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-15-automatically-analyse-performance-of-executable-file-with-benperformance-measurementchmark-tool-input-and-output-file)
+  * [Scenario 15 (Automatically Analyse Performance of Executable File with Performance Measurement Tool, Input and Output File)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-15-automatically-analyse-performance-of-executable-file-with-performance-measurement-tool-input-and-output-file)
 * Collecting Data from Multiple Machines
-  * [Scenario 16 (Manually Analyse Performance in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-16-manually-analyse-performance-in-multiple-machines)
-  * [Scenario 17 (Automatically Analyse Performance in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-17-automatically-analyse-performance-in-multiple-machines)
+  * [Scenario 16 (Manually Analyse Performance in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-16-manually-measure-performance-in-multiple-machines)
+  * [Scenario 17 (Automatically Analyse Performance in Multiple Machines)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-17-automatically-measure-performance-in-multiple-machines)
   * [Scenario 18 (Automatically Analyse Performance in Multiple Machines with Multiple Performance Measurement Tools and Input Files)](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-18-automatically-analyse-performance-in-multiple-machines-with-multiple-performance-measurement-tools-and-input-files)
 * More Parameters and Measurements
   * [Scenario 19 (Same parameter values and Same measurement type(s))](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#scenario-19-same-parameter-values-and-same-measurement-types)
