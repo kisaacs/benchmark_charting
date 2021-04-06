@@ -1,6 +1,10 @@
 
 # Benchmark Run Scenarios
 
+This flowchart captures choices implicit in the model described later in this document:
+
+![](./figs/flowchart.jpg)
+
 These scenarios describe how data is collected to perform performance comparisons. We first discuss the choices in collecting performance data. We then
  present a flow chart of the process, using these choices. Finally, we describe a subset of paths through the flow chart, as example scenarios.
 
@@ -68,10 +72,6 @@ B. Collection of Data & Metadata
   
 C. Analysis
   1. Filter/plot/run other tools
-
-This flowchart captures choices implicit in the above model
-
-![](./figs/flowchart.jpg)
 
 
 ### Example Scenarios
