@@ -713,8 +713,8 @@ She prepares a performance measurement tool that reads from an input file simila
 
 ##### Execute the programs and output results to a file:
 
-From a command line window, she runs the performance measurement tool executable and redirects the output into a file (with “>>”). Let’s consider the benchmark
- tool prints out its output as JSON format which could be parsed into python dictionary. For example, if she uses [*blazemark*](https://bitbucket.org/blaze-lib/blaze/wiki/Blazemark) for performance measurement, she could redirect it’s output as follows:
+From a command line window, she runs the performance measurement tool executable and redirects the output into a file (with “>>”). Let’s consider the
+ performance measurement tool prints out its output as JSON format which could be parsed into python dictionary. For example, if she uses [*blazemark*](https://bitbucket.org/blaze-lib/blaze/wiki/Blazemark) for performance measurement, she could redirect it’s output as follows:
 
     $ ./complex1 -only-blaze >> outfile
 
