@@ -375,7 +375,7 @@ She creates plots similar to
 ##### Prepare executables and parameters:
 
 She prepares executables and parameters similar to
-[Analyse Performance of Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
+[Analyse Performance of Executable File Manually - Prepare executables and parameters](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a performance measurement script for executables:
 
@@ -612,7 +612,7 @@ She creates plots similar to
 ##### Prepare executables and parameters:
 
 She prepares executables and parameters similar to
-[Analyse Performance of Executable File Manually](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
+[Analyse Performance of Executable File Manually - Prepare executables and parameters](https://github.com/sayefsakin/benchmark_charting/blob/master/benchmark_run_scenarios.md#prepare-executables-and-parameters).
 
 ##### Prepare a performance measurement tool:
 
