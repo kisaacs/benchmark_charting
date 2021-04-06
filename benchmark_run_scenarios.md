@@ -73,7 +73,8 @@ C. Analysis
   1. Filter/plot/run other tools
 
 The flow chart version is here (same figure as at the top):
-<img src="figs/flowchart.jpg" height=200 />
+
+<kbd><img src="figs/flowchart.jpg" height=300 /></kbd>
 
 
 
