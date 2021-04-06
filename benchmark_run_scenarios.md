@@ -59,15 +59,15 @@ A. Execution
   4. Data is generated and output
   
 B. Collection of Data & Metadata
-  5. Collate in-memory data
-  6. Collate output file data
-  7. Collate command line arguments used
-  8. Collate platform specific data
-  9. Collate URL request data
-  10. Merge collated data to single file/directory/database
+  1. Collate in-memory data
+  2. Collate output file data
+  3. Collate command line arguments used
+  4. Collate platform specific data
+  5. Collate URL request data
+  6. Merge collated data to single file/directory/database
   
 C. Analysis
-  11. Filter/plot/run other tools
+  1. Filter/plot/run other tools
 
 This flowchart captures choices implicit in the above model
 
